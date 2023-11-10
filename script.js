@@ -43,3 +43,22 @@ document.addEventListener('DOMContentLoaded', function() {
         quantityInput.addEventListener('input', updateTotal);
     });
 });
+var btnT = document.querySelectorAll('.fa-trash')
+
+for(let i = 0;i<btnT.length;i++) {
+    btnT[i].addEventListener('click', function(){
+        btnT[i].parentElement.remove()
+        SommeTotal()
+    })
+}
+
+var btnH = document.querySelectorAll('.fa-heart')
+
+for(let i = 0;i<btnH.length;i++) {
+    btnH[i].addEventListener('click',function(){
+        if (btnH[i].style.color == 'red'){
+            btnH[i].style.color = 'black'
+        }else {
+            btnH[i].style.color = 'red'
+        }
+    })}
